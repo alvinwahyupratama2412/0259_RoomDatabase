@@ -1,8 +1,5 @@
 package com.au.pertemuan_9.view
 
-
-package com.au.pertemuan_9.view
-
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -13,10 +10,12 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.dp
 
 import com.au.pertemuan_9.R
 import com.au.pertemuan_9.room.Siswa
