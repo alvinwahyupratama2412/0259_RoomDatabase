@@ -20,7 +20,6 @@ import androidx.compose.ui.unit.dp
 import com.au.pertemuan_9.R
 import com.au.pertemuan_9.room.Siswa
 import com.au.pertemuan_9.uicontroller.DestinasiNavigasi
-import com.au.pertemuan_9.uicontroller.SiswaTopAppBar
 import com.au.pertemuan_9.viewmodel.HomeViewModel
 import com.au.pertemuan_9.viewmodel.PenyediaViewModel
 
@@ -34,7 +33,8 @@ object DestinasiHome : DestinasiNavigasi {
 fun HomeScreen(
     navigateToItemEntry: () -> Unit,
     modifier: Modifier = Modifier,
-    viewModel: HomeViewModel = viewModel(factory = PenyediaViewModel.Factory)
+    viewModel: HomeViewModel = viewModel(factory = PenyediaViewModel.Factory),
+    navigateToItemUpdate: () -> Unit
 ) {
     val scrollBehavior = TopAppBarDefaults.enterAlwaysScrollBehavior()
 
