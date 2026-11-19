@@ -21,8 +21,8 @@ import com.au.pertemuan_9.view.route.DestinasiDetailSiswa.itemIdArg
 import com.au.pertemuan_9.view.route.DestinasiEditSiswa
 
 @Composable
-fun SiswaApp(navController: NavHostController= rememberNavController(), modifier: Modifier){
-    HostNavigasi(navController = navController)
+fun SiswaApp(navController: NavHostController = rememberNavController(), modifier: Modifier = Modifier){
+    HostNavigasi(navController = navController, modifier = modifier)
 }
 
 @OptIn(ExperimentalMaterial3Api::class)

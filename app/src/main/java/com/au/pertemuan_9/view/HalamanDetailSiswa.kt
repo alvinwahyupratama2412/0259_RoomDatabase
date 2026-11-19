@@ -1,7 +1,5 @@
 package com.au.pertemuan_9.view
 
-import android.app.AlertDialog
-import android.graphics.pdf.models.ListItem
 import androidx.annotation.StringRes
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -26,9 +24,11 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
@@ -36,7 +36,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.au.pertemuan_9.R
 import com.au.pertemuan_9.room.Siswa
-import com.au.pertemuan_9.uicontroller.SiswaTopAppBar
 import com.au.pertemuan_9.view.route.DestinasiDetailSiswa
 import com.au.pertemuan_9.viewmodel.DetailSiswaUiState
 import com.au.pertemuan_9.viewmodel.DetailViewModel

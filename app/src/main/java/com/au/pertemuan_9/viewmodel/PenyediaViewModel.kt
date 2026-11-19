@@ -9,32 +9,41 @@ import com.au.pertemuan_9.AplikasiSiswa
 
 
 object PenyediaViewModel {
+
     val Factory = viewModelFactory {
 
         initializer {
-            HomeViewModel(aplikasiSiswa().container.repositoriSiswa)
+            HomeViewModel(
+                aplikasiSiswa().container.repositoriSiswa
+            )
         }
 
         initializer {
-            EntryViewModel(aplikasiSiswa().container.repositoriSiswa)
+            EntryViewModel(
+                aplikasiSiswa().container.repositoriSiswa
+            )
         }
 
         initializer {
-            DetailViewModel(this.createSavedStateHandle(),
-                aplikasiSiswa().container.repositoriSiswa)
+            DetailViewModel(
+                this.createSavedStateHandle(),
+                aplikasiSiswa().container.repositoriSiswa
+            )
         }
 
         initializer {
-            EditViewModel(this.createSavedStateHandle(),
-                aplikasiSiswa().container.repositoriSiswa)
+            EditViewModel(
+                this.createSavedStateHandle(),
+                aplikasiSiswa().container.repositoriSiswa
+            )
         }
-
     }
 }
 
 /**
- * Fungsi ekstensi query untuk objek [Application] dan mengembalikan sebuah instance dari
- * [AplikasiSiswa].
+ * Fungsi ekstensi query untuk objek Application
+ * dan mengembalikan sebuah instance dari AplikasiSiswa.
  */
 fun CreationExtras.aplikasiSiswa(): AplikasiSiswa =
-    (this[ViewModelProvider.AndroidViewModelFactory.APPLICATION_KEY] as AplikasiSiswa)
+    (this[ViewModelProvider.AndroidViewModelFactory.APPLICATION_KEY] as? AplikasiSiswa)
+        ?: error("Application bukan AplikasiSiswa. Periksa AndroidManifest.xml")
