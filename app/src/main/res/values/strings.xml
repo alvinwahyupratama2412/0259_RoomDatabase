@@ -12,4 +12,11 @@
     <string name="required_field">* Wajib diisi</string>
 
     <string name="deskripsi_no_item">Belum ada data siswa. Silakan tambahkan data siswa.</string>
+
+    <!-- Dialog Konfirmasi -->
+    <string name="attention">Perhatian</string>
+    <string name="tanya">Apakah Anda yakin ingin menghapus data siswa?</string>
+    <string name="no">Tidak</string>
+    <string name="yes">Ya</string>
+
 </resources>
